@@ -2,119 +2,70 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Mori</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style sheet.css">
-    <script src="java script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="background-image-container1">
-        <header>
-            <nav class="flex justify-between items-center p-4">
-                <a href="index.html" id="home-link">
-                <img src="photos/mori_logo.png" alt="mori" class="logo">
-                </a>
-                <nav class="desktop-nav">
-                    <ul>
-                        <li><a href="Backpacks.html" class="cakes-link">Backpacks</a></li>
-                        <li><a href="Handbags.html" class="cakes-link">Handbags</a></li>
-                        <li><a href="Accessories.html" class="cakes-link">Accessories</a></li>
-                        <li><a href="Contact.html" class="cakes-link">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="cart-icon" onclick="toggleCart()">
-                    <img src="photos/shopping-cart.png" alt="Shopping Cart">
-                    <span id="cart-count">0</span>
-                </div>
-            </nav>
-        </header>
+<body class="vh-100 overflow-hidden">
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container">
+            <!--Logo-->
+          <a class="navbar-brand fs-4" href="#">mori</a>
+          <!--Toggle Btn-->
+          <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="photos/slider1.jpg" alt="Cake Image 1">
+          <!--SideBar-->
+          <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+            <!--SideBar Header-->
+            <div class="offcanvas-header text-white border-bottom">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">mori</h5>
+              <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
 
-            <div class="mySlides fade">
-                <img src="photos/slider2.jpg" alt="Cake Image 2">
+            <!--SideBar body-->
+            <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+              <ul class="navbar-nav justify-content-center align-items-center fs-6 flex-grow-1 pe-3">
+                <li class="nav-item mx-2">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="#backpack">BackPack</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#handbag">HandBag</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#accessories">Accessories</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                
+              </ul>
+              <!--Login / Sign up-->
+              <div class="d-flex flex-column flex-lg-row align-items-center gap-3">
+                <a href="#login" class="text-white">Login</a>
+                <a href="#signup" class="text-white text-decoration-none px-3 p-1 rounded-4"
+                style="background-color: #d3197c;"
+                >Sign Up</a>
+
+              </div>
             </div>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <section class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center text-white fs-1">
+            <h1 style="font-size: 1.5cm;">Responsive</h1>
+        </section>
+      </main>
 
-            <div class="mySlides fade">
-                <img src="photos/slider3.jpg" alt="Cake Image 3">
-            </div>
-        </div>
-        <div class="slider-dots">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-
-        <div class="button-container">
-            <a href="Backpacks.html" class="custom-button">BUY NOW</a>
-        </div>
-
-        <div class="video-container" id="video-container">
-            <video id="local-video" width="720" height="400" controls autoplay muted playsinline>
-                <source src="photos/ ads_video.mp4" type="video/mp4">
-            </video>
-        </div>
-    </div> 
-    
-    <div class="storeimage-container">
-        <img src="photos/baker's brew store.jpg" alt="Baker's Brew Store Image">
-        <div class="storedescription-container">
-            <h3>
-                FIND A BAKER’S BREW BAKERY & CAKE SHOP NEAREST TO YOU
-            </h3>
-
-            <p>
-                Embark on a delightful culinary journey as you explore the nearest Baker’s 
-                Brew outlet in your vicinity. Indulge in a world of mouthwatering, expertly 
-                crafted cakes, pastries, and breads, tailored to satisfy every palate. 
-            </p>
-        </div>
-    </div>
-    <div class="cart-popup" style="right: -500px;">
-        <div class="shopping-cart-title">Shopping Cart</div>
-        <div class="empty-cart-title">Your Cart is Empty</div>
-        <div class="cart-popup-content">
-        </div>
-        <div class="close-cart" onclick="toggleCart()">X</div>
-    </div>
-    
-
-
-<footer>
-    <div class="about-container">
-        <h3>ABOUT US</h3>
-        <p>
-            Started back in 2015 with a humble beginning of the love and passion for baking,
-            Baker's Brew wanted to share this zeal for baking with the community
-            around the neighborhood of Sembawang, Singapore.
-
-            Since then, we have grown strong to be The Leading Cake Shop & Bakery in Singapore.
-        </p>
-        <div class="concierge-info">
-            <p> +65 8877 8870 / enquiries@bakersbrew.com / corporate@bakersbrew.com</p>
-            <p>(Operating Hours: Mon-Sun 9:00 AM - 6:00 PM)</p>
-        </div>
-        <div class="grey-line"></div>
-        <h2>FOLLOW US ON SOCIAL MEDIA</h2>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/baker" target="_blank">
-                <img src="photos/instagramicon.png" alt="Instagram">
-            </a>
-            <a href="https://www.facebook.com/bakersbrewstudio" target="_blank">
-                <img src="photos/facebookicon.png" alt="Facebook">
-            </a>
-            <a href="https://www.tiktok.com/@bakersbrew" target="_blank">
-                <img src="photos/tiktokicon.png" alt="Tiktok">
-            </a>
-        </div>
-    </div>
-</footer>
-<script src="java script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
-
 </html>
