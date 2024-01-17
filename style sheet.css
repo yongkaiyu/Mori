@@ -1,0 +1,982 @@
+body {
+    font-family: 'Arial', sans-serif; /* Use Arial font */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background */
+    background-attachment: fixed; /* Fix the background while scrolling */
+    background-color: rgb(203, 203, 203); /* Light gray background color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    color: #fff; /* White text color */
+} 
+
+/* Set styles for the main content container */
+.container {
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+/* Styles for the header section */
+header {
+    background-color: rgb(237, 224, 224); /* Black background for the header */
+    color: gold; /* Gold text color */
+    text-align: center; /* Center-align text */
+    font-size: 30px; /* Set font size */
+    font-family: 'Dancing Script', cursive; /* Use the Dancing Script font */
+    position: relative; /* Relative positioning for child elements */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styles for the logo in the header */
+.logo {
+    display: block;
+    margin: 0 auto; /* Center the logo horizontally */
+    max-width: 160px; /* Limit the max width of the logo */
+    padding-left: 190px;
+}
+
+
+
+#mobile-menu-button {
+    margin-top: 14px ;
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 30px; /* Adjust the size as needed */
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 2; /* Ensures it's above other content */
+    /* Add other styles for the button if needed */
+}
+  
+
+.mobile-nav {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: -10px; /* Off-screen to the left */
+    height: 100%;
+    background: #fff; /* Background color for the mobile menu */
+    transition: transform 0.5s ease-in-out;
+    z-index: 1000;
+
+}
+
+/* Styles for the navigation bar */
+.desktop-nav {
+    padding-right: 490px; /* Add padding to space out the navigation bar */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+/* Styles for the navigation menu */
+nav ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    text-align: center; /* Center-align text in the navigation menu */
+}
+
+nav li {
+    display: inline; /* Display list items inline */
+    margin: auto 20px; /* Add margin to each list item */
+}   
+
+/* Styles for navigation links */
+nav a {
+    text-decoration: none; /* Remove text decoration */
+    color: #000; /* Black text color */
+    font-weight: bold; /* Set font to bold */
+}
+
+
+.desktop-nav ul li a {
+    color: #151414;
+    font-size: 23px;
+}
+.mobile-nav ul li a {
+    color: #151414;
+    font-size: 23px;
+}
+
+/* Styles for the slideshow container */
+.slideshow-container {
+    max-width: 750px; /* Limit the max width of the slideshow container */
+    height: 430px; /* Set height for the slideshow container */
+    text-align: center; /* Center-align text in the slideshow container */
+    margin: 0 auto; /* Center the slideshow container horizontally */
+    position: relative; /* Relative positioning for child elements */
+}
+
+.slideshow-container img {
+    width: 100%; /* Set maximum width for slider images */
+    height: 430px; /* Set height for slider images */
+    object-fit: cover; /* Cover the entire container with images */
+}
+
+/* Styles for the button container */
+.button-container {
+    text-align: center; /* Center-align text in the button container */
+    position: relative; /* Relative positioning for child elements */
+    z-index: 1; /* Set the stacking order */
+    margin-top: 20px; /* Add top margin */
+    padding: 20px 0; /* Add padding to the button container */
+}
+
+/* Styles for custom buttons */
+.custom-button {
+    text-decoration: none; /* Remove text decoration */
+    color: #fff; /* White text color */
+    background-color: #ff8c00; /* Orange background color */
+    padding: 15px 30px; /* Set padding for the buttons */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    font-weight: bold; /* Set font weight to bold */
+    font-size: 20px; /* Set font size */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+/* Style on hover */
+.custom-button:hover {
+    background-color: #72be21; /* Change color on hover */
+}
+
+/* Styles for slider dots */
+.slider-dots {
+    text-align: center; /* Center-align text in the slider dots */
+    margin-top: 20px; /* Add top margin */
+    display: flex; /* Display dots as flex items */
+    justify-content: center; /* Center-align dots horizontally */
+}
+
+.dot {
+    width: 15px; /* Set width for dots */
+    height: 15px; /* Set height for dots */
+    border-radius: 50%; /* Create circular dots */
+    background-color: #ffffff; /* White dot color */
+    display: inline-block; /* Display dots as inline blocks */
+    margin: 0 5px; /* Add margin between dots */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+.dot.active {
+    background-color: #4a4747; /* Darker color for active dot */
+}
+
+/* Styles for the store image container */
+.storeimage-container {
+    max-width: 800px; /* Limit the max width of the store image container */
+    margin-right: 20px; /* Add right margin */
+    height: 390px; /* Set height for the store image container */
+    text-align: right; /* Right-align text in the store image container */
+    overflow: hidden; /* Hide overflow content */
+    display: flex; /* Display container as flex */
+    align-items: center; /* Center-align items vertically */
+}
+
+.storeimage-container img {
+    width: 100%; /* Set maximum width for store images */
+    height: 390px; /* Set height for store images */
+    object-fit: cover; /* Cover the entire container with images */
+    position: relative; /* Relative positioning for child elements */
+    margin: 0px; /* Remove default margin */
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Styles for the store description container */
+.storedescription-container {
+    flex: 1; /* Allow flexible sizing */
+    text-align: right; /* Right-align text in the store description container */
+    padding-right: 20px; /* Add right padding */
+    position: absolute; /* Absolute positioning for accurate placement */
+    color: #000000; /* Black text color */
+}
+
+.storedescription-container h3 {
+    text-align: left; /* Left-align heading text */
+    padding-left: 825px; /* Add left padding */
+}
+
+.storedescription-container p {
+    padding-left: 829px; /* Add left padding */
+    padding-right: 11px; /* Add right padding */
+    text-align: left; /* Left-align paragraph text */
+    margin-top: 40px; /* Add top margin */
+}
+
+/* Styles for the footer section */
+footer {
+    background-color: rgb(29, 29, 22); /* Dark background color for the footer */
+    color: #fff; /* White text color */
+    padding: 10px; /* Add padding to the footer */
+    text-align: center; /* Center-align text in the footer */
+    font-size: 14px; /* Set font size */
+    max-width: 0 auto; /* Limit the max width of the footer */
+    margin: 0 auto; /* Center the footer horizontally */
+}
+
+
+/* Styles for links with class "cakes-link" */
+.cakes-link {
+    color: #ffffff; /* Set the text color to white for links with this class */
+}
+
+/* Styles for concierge information */
+.concierge-info {
+    text-align: center; /* Center-align text */
+    margin-top: 20px; /* Add top margin */
+    color: #fff; /* White text color */
+    font-size: 18px; /* Set font size */
+    padding: 2px; /* Add padding */
+}
+
+/* Styles for the video container */
+.video-container {
+    display: flex; /* Display as flex container */
+    justify-content: center; /* Center-align content horizontally */
+    align-items: center; /* Center-align content vertically */
+    height: 60vh; /* Set the height of the container */
+    margin: 10px 0; /* Add top and bottom margin */
+    padding: 10px; /* Add padding */
+}
+
+/* Styles for a container with a white background */
+.white-container {
+    background-color: #fff; /* Set background color to white */
+    padding: 20px; /* Add padding */
+    text-align: center; /* Center-align text */
+}
+
+/* Styles for a container with sample cakes */
+.sample-cakes-container {
+    color: #000; /* Black text color */
+    display: flex; /* Display as flex container */
+    justify-content: center; /* Center-align content horizontally */
+    align-items: center; /* Center-align content vertically */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    width: 100%; /* Set width to 100% */
+}
+
+/* Styles for individual sample cakes */
+.sample-cake {
+    flex: 0 0 calc(50% - 20px); /* Set flexible sizing for responsive design */
+    margin: 10px; /* Add margin around each sample cake */
+    position: relative; /* Relative positioning for child elements */
+    overflow: hidden; /* Hide overflow content */
+    align-items: center; /* Center-align items vertically */
+    transition: background-color 0.3s ease; /* Add a transition effect for the background color */
+    border-radius: 15px; /* Add border-radius for rounded corners */
+}
+
+/* Styles for images inside sample cakes */
+.sample-cake img {
+    max-width: 100%; /* Set maximum width for images */
+    height: auto; /* Set height to auto for proportional scaling */
+    display: block; /* Remove any potential extra spacing */
+    border-radius: 15px; /* Add border-radius for rounded corners */
+}
+
+/* Styles for the name of the cake within the sample cake */
+.cake-name {
+    position: absolute; /* Absolute positioning for accurate placement */
+    bottom: 0; /* Align the bottom of the cake name */
+    left: 0; /* Align the left of the cake name */
+    width: 100%; /* Set width to 100% */
+    background-color: rgba(255, 255, 255, 0.8); /*set background color*/
+    padding: 5px; /* Add padding */
+    text-align: center; /* Center-align text */
+    font-weight: bold; /* Set font weight to bold */
+    font-size: 16px; /* Set font size */
+    box-sizing: border-box; /* Include padding and border in width/height calculations */
+    border-bottom: 15px; /* Add bottom border */
+}
+
+
+/* Styles for the sample cake on hover */
+.sample-cake:hover {
+    background-color: #ccc; /* Apply grey background on hover */
+    overflow: hidden; /* Hide overflow content */
+    border-radius: 15px; /* Add border-radius for rounded corners */
+}
+
+/* Styles for images inside the sample cake */
+.sample-cake img {
+    max-width: 100%; /* Set maximum width for images */
+    height: auto; /* Set height to auto for proportional scaling */
+    display: block; /* Remove any potential extra spacing */
+}
+
+/* Styles for the cake info on hover */
+.sample-cake:hover .cake-info {
+    display: flex; /* Display as flex container */
+    justify-content: center; /* Center-align content horizontally */
+    align-items: center; /* Center-align content vertically */
+}
+
+/* Styles for the cake information container */
+.cake-info {
+    position: absolute; /* Absolute positioning for accurate placement */
+    top: 0; /* Align the top of the container */
+    left: 0; /* Align the left of the container */
+    width: 100%; /* Set width to 100% */
+    height: 100%; /* Set height to 100% */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent grey background */
+    display: none; /* Initially hide the container */
+}
+
+/* Styles for the plus icon within the cake information container */
+.cake-info .plus-icon {
+    font-size: 55px; /* Adjust the font size for the PLUS icon */
+    color: #fff; /* Set the color of the PLUS icon */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Styles for the shopping cart icon */
+.cart-icon {
+    position: absolute; /* Absolute positioning for accurate placement */
+    top: 20px; /* Set top position */
+    right: 20px; /* Set right position */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.cart-icon img {
+    width: 50px; /* Adjust the width to make the icon smaller */
+    height: 50px; /* Adjust the height accordingly */
+}
+
+/* Styles for the cart pop-out window */
+.cart-popup {
+    position: fixed; /* Fixed positioning for overlay effect */
+    top: 0; /* Align the top of the window */
+    right: -500px; /* Initial position, adjust as needed */
+    width: 480px; /* Adjust the width of the cart */
+    height: 100%; /* Set height to 100% */
+    background-color: #494646; /* Set background color of the cart */
+    transition: right 0.5s ease; /* Add transition for smooth sliding */
+    overflow-y: auto; /* Add overflow-y to allow vertical scrolling */
+}
+
+/* Styles for the content inside the cart pop-up window */
+.cart-popup-content {
+    padding: 15px; /* Add padding */
+    margin: 60px auto; /* Center the content horizontally */
+    color: #fff; /* White text color */
+    font-size: 20px; /* Set font size */
+    max-height: 80vh; /* Limit the maximum height of the cart content */
+}
+
+/* Styles for the button to close the cart */
+.close-cart {
+    position: absolute; /* Absolute positioning for accurate placement */
+    top: 21px; /* Set top position */
+    right: 22px; /* Set right position */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    color: #ffffff; /* White text color */
+    font-size: 20px; /* Set font size */
+}
+
+/* Styles for the delete icon in the cart */
+.delete-icon {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    color: #fa4a4a; /* Set the color of the delete icon */
+    margin-right: 10px; /* Add right margin */
+    padding-right: 5px; /* Add right padding */
+    font-size: 24px; /* Set font size */
+}
+
+/* Styles for the cake image in the shopping cart */
+.cart-cake-image {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    margin-right: 10px; /* Adjust the spacing between the image and other details */
+    border-radius: 5px; /* Add border-radius for rounded corners if desired */
+}
+
+/* Styles for the title of the shopping cart */
+.shopping-cart-title {
+    font-family: 'Dancing Script', cursive; /* Use the specified font */
+    font-size: 30px; /* Set font size */
+    font-weight: bold; /* Set font weight to bold */
+    color: #ffffff; /* White text color */
+    margin-top: 25px; /* Adjust the top margin */
+    padding-left: 160px; /* Adjust the left padding */
+}
+
+/* Styles for the title when the shopping cart is empty */
+.empty-cart-title {
+    font-family: 'Dancing Script', cursive; /* Use the specified font */
+    font-size: 25px; /* Set font size */
+    font-weight: bold; /* Set font weight to bold */
+    color: #ffffff; /* White text color */
+    margin-top: 250px; /* Adjust the top margin */
+    padding-left: 151px; /* Adjust the left padding */
+}
+
+.checkout-button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    position: relative; /* Adjust positioning based on your layout */
+    left: 353px; /* Adjust the right position as needed */
+    bottom: 109px; /* Adjust the bottom position as needed */
+
+}
+
+/* Style on hover */
+.checkout-button:hover {
+    background-color: #45a049; /* Change color on hover */
+}
+
+/* Style for a grey horizontal line */
+.grey-line {
+    height: 2px; /* Set the height of the line */
+    background-color: #ccc; /* Set the background color of the line */
+    margin: 20px 0; /* Add margin above and below the line */
+}
+
+/* Styles for social icons */
+.social-icons {
+    margin-top: 20px; /* Add top margin for social icons */
+    text-align: center; /* Center-align social icons */
+}
+
+.social-icons a {
+    margin: 10px; /* Add margin around social icons */
+    display: inline-block; /* Display social icons in a row */
+}
+
+.social-icons img {
+    max-width: 30px; /* Set maximum width for social icons */
+    height: auto; /* Set height to auto for proportional scaling */
+}
+
+/* Styles for the about container */
+.about-container {
+    text-align: center; /* Center-align content in the about container */
+    max-width: 800px; /* Set maximum width for the about container */
+    margin: 0 auto; /* Center the about container horizontally */
+    margin-top: 17px; /* Add top margin for the about container */
+    margin-bottom: 17px; /* Add bottom margin for the about container */
+}
+
+/* Styles for headings within the about container bar */
+.about-container-bar h2 {
+    max-width: fit-content; /* Set maximum width for the heading */
+    color: rgb(255, 255, 255); /* Set text color for the heading */
+    padding: 0; /* Remove padding */
+    margin: 20px auto; /* Center the heading horizontally with top margin */
+    margin-top: 50px; /* Add additional top margin */
+}
+
+.about-container-bar h4 {
+    color: rgb(255, 255, 255); /* Set text color for subheadings */
+    max-width: fit-content; /* Set maximum width for subheadings */
+    margin: auto; /* Center-align subheadings horizontally */
+    padding: 10px; /* Add padding around subheadings */
+    margin-bottom: 0px; /* Remove bottom margin for subheadings */
+}
+
+.about-container-bar {
+    max-width: 800px; /* Set maximum width for the about container bar */
+    text-align: center; /* Center-align content in the about container bar */
+}
+
+/* Styles for the image row */
+.image-row {
+    display: flex; /* Display images in a row */
+    justify-content: space-between; /* Add space between images */
+    margin: 50px auto; /* Center-align image row horizontally with margin */
+}
+
+.image-row img {
+    width: 100%; /* Set width to 100% for responsive images */
+    height: 100px; /* Set fixed height for images */
+    object-fit: contain; /* Maintain aspect ratio for images */
+}
+
+.image-row p {
+    margin-top: 10px; /* Add top margin for paragraphs within the image row */
+}
+
+
+
+/* Add a new style for the background image container */
+.background-image-container1 {
+    background-image: url('photos/background1.jpg');
+    background-size: cover; /* Set background size to cover */
+    background-position: center; /* Set background position to center */
+    background-attachment: fixed; /* Fix the background position */
+    background-color: transparent; /* Set transparent background color */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    position: relative; /* Set relative positioning for the container */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.background-image-container2 {
+    background-image: url('photos/cake background2.jpg');
+    background-size: cover; /* Set background size to cover */
+    background-position: center; /* Set background position to center */
+    background-attachment: fixed; /* Fix the background position */
+    background-color: transparent; /* Set transparent background color */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    position: relative; /* Set relative positioning for the container */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.background-image-container3 {
+    background-image: url('photos/cake background3.jpg');
+    background-size: cover; /* Set background size to cover */
+    background-position: center; /* Set background position to center */
+    background-attachment: fixed; /* Fix the background position */
+    background-color: transparent; /* Set transparent background color */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    position: relative; /* Set relative positioning for the container */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+
+.background-image-container4 {
+    background-image: url('photos/cake\ background4.jpg');
+    background-size: cover; /* Set background size to cover */
+    background-position: center; /* Set background position to center */
+    background-attachment: fixed; /* Fix the background position */
+    background-color: transparent; /* Set transparent background color */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    position: relative; /* Set relative positioning for the container */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.background-image-container5 {
+    background-image: url('photos/cake background\ 5.jpg');
+    background-size: cover; /* Set background size to cover */
+    background-position: center; /* Set background position to center */
+    background-attachment: fixed; /* Fix the background position */
+    background-color: transparent; /* Set transparent background color */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    position: relative; /* Set relative positioning for the container */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+/* Styles for the "About Us" banner */
+.about-banner {
+    background-color: white; /* Set background color for the banner */
+    padding: 20px 0; /* Add padding to the banner */
+    text-align: center; /* Center-align content in the banner */
+}
+
+/* Styles for underlined links */
+.underline-link {
+    position: relative; /* Set relative positioning for the link */
+}
+
+.underline-link:after {
+    content: ""; /* Create an empty content pseudo-element */
+    position: absolute; /* Set absolute positioning for the underline */
+    width: 100%; /* Set width to 100% */
+    height: 1px; /* Adjust the thickness of the underline as needed */
+    background-color: rgb(0, 0, 0); /* Set the color of the underline */
+    bottom: -5px; /* Adjust the distance between the link text and the underline */
+    left: 0; /* Align the underline with the left edge of the link */
+    display: block; /* Display as a block element */
+}
+
+
+/* Pop-up Styles */
+
+/* Style for a basic pop-up content */
+.popup-content {
+    display: none; /* Initially hide the pop-up content */
+    background-color: #746060; /* Set the background color of the pop-up */
+    margin: 1% auto; /* Add margin and center horizontally */
+    padding: 20px; /* Add padding to the pop-up content */
+    width: 70%; /* Set the width of the pop-up content */
+    max-width: 500px; /* Set the maximum width of the pop-up content */
+    border-radius: 20px; /* Add border-radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(45, 44, 44, 0.1); /* Add box shadow for a subtle effect */
+}
+
+/* Style for a flex-based pop-up content with wrapping */
+.popup-content2 {
+    display: flex; /* Use flex display for the pop-up content */
+    flex-wrap: wrap; /* Allow content to wrap to the next line */
+    background-color: #746060; /* Set the background color of the pop-up */
+    margin: 5% auto; /* Add margin and center horizontally */
+    padding: 20px; /* Add padding to the pop-up content */
+    width: 70%; /* Set the width of the pop-up content */
+    max-width: 750px; /* Set the maximum width of the pop-up content */
+    border-radius: 20px; /* Add border-radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(45, 44, 44, 0.1); /* Add box shadow for a subtle effect */
+}
+
+/* Styles for the close button on hover and focus */
+.close:hover,
+.close:focus {
+    color: #000; /* Change text color on hover or focus */
+    text-decoration: none; /* Remove text decoration on hover or focus */
+    cursor: pointer; /* Change cursor to pointer on hover or focus */
+}
+
+/* Form Styles */
+
+/* Style for a form group with flex column layout */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* Style for form group labels */
+.form-group label {
+    margin-bottom: 5px;
+}
+
+/* Styles for form group input and textarea */
+.form-group input,
+.form-group textarea {
+    padding: 8px; /* Add padding to input and textarea */
+    margin-bottom: 10px; /* Add bottom margin to input and textarea */
+    border: 1px solid #332f2f; /* Set border for input and textarea */
+    border-radius: 4px; /* Add border-radius for rounded corners */
+}
+
+/* Additional style for file input in form group */
+.form-group input[type="file"] {
+    margin-bottom: 20px; /* Add extra bottom margin for file input */
+}
+
+/* Style for the container of submit button */
+.submit-container {
+    text-align: center; /* Center-align the submit button container */
+}
+
+/* Style for the submit button */
+.submit-button {
+    padding: 10px 20px; /* Add padding to the submit button */
+    border: none; /* Remove border from the submit button */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    cursor: pointer; /* Set cursor to pointer */
+    width: 100%; /* Make the button full width */
+}
+
+/* Style for the submit button on hover */
+.submit-button:hover {
+    background-color: #45a049; /* Change background color on hover */
+    cursor: pointer; /* Set cursor to pointer on hover */
+}
+
+/* Style for a form row with flex space-between layout */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px; /* Add margin around the form row */
+    align-items: center; /* Align items in the center */
+}
+
+/* Style for a full-width form row */
+.form-row1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px; /* Add margin around the form row */
+    align-items: center; /* Align items in the center */
+    width: 100%; /* Set the form row to full width */
+}
+
+/* Additional CSS to adjust the width of form fields for better responsiveness */
+.form-group2 {
+    flex: 0 0 calc(50% - 10px); /* Set flex properties for a two-column layout */
+}
+
+.form-group3 {
+    flex: 0 0 calc(100% - 10px); /* Set flex properties for a full-width layout */
+}
+
+.form-group2 input,
+.form-group2 textarea {
+    width: 300px; /* Set width for the input and textarea in the two-column layout */
+    padding: 10px; /* Add padding to the input and textarea */
+    margin-bottom: 10px; /* Add bottom margin to the input and textarea */
+    border: 1px solid #332f2f; /* Set border for input and textarea */
+    border-radius: 4px; /* Add border-radius for rounded corners */
+}
+
+.form-group3 input,
+.form-group3 textarea {
+    width: 687px; /* Set width for the input and textarea in the full-width layout */
+    padding: 10px; /* Add padding to the input and textarea */
+    margin-bottom: 10px; /* Add bottom margin to the input and textarea */
+    border: 1px solid #332f2f; /* Set border for input and textarea */
+    border-radius: 4px; /* Add border-radius for rounded corners */
+}
+
+
+
+
+
+/* Desktop View */
+@media (min-width: 769px) {
+    .slideshow-container {
+        margin-top: 50px; /* Adjust top margin for the slideshow container on desktop */
+    }
+    .slideshow-container img {
+        height: 430px; /* Set the height of slideshow images on desktop */
+    }
+    .sample-cake {
+        flex: 0 0 calc(33.33% - 20px); /* Set the flex property for sample cakes on desktop */
+        margin: 10px; /* Adjust margin for sample cakes on desktop */
+        position: relative;
+        overflow: hidden;
+    }
+} 
+
+/* Mobile view */
+@media (max-width: 850px) {
+    .logo{
+        padding-left: 201px;
+    }
+    #mobile-menu-button{
+        display: block;
+    }
+    .mobile-nav{
+         /* Initial state of the menu: hidden off-screen */
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        display: inline-block;
+        width: 34%; /* Set the width for navigation links on mobile */
+        margin: 0px 10px;  /* Set margin for navigation links on mobile */
+    }
+
+    .mobile-nav.open {
+        /* When the 'open' class is added via JavaScript, slide the menu into view */
+        transform: translateX(0);
+    }
+
+    .slider-dots {
+        margin-top: unset; /* Remove top margin for slider dots on mobile */
+        padding-top: 0px; /* Adjust padding for slider dots on mobile */
+    }
+    
+    .desktop-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s;
+        z-index: 1000;
+    }
+
+    .desktop-nav.open {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #fff; /*Background color for the mobile nav*/
+        top: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column; /* Stack the links vertically*/
+        justify-content: center; /* Center content vertically*/
+        align-items: center; /*Center content horizontally*/
+        overflow-y: auto; /*Allow scrolling for overflow content */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-bar.open {
+        left: 0;
+    }
+
+    .mobile-nav {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(-100%); /* Start off-screen */
+    }
+
+    .nav-item {
+        margin: 10px 0; /* Adjust margin for navigation items on mobile */
+        text-align: center;
+    }
+    
+    nav li a {
+        display: inline-block;
+        width: 34%; /* Set the width for navigation links on mobile */
+        margin: 11px 10px;  /* Set margin for navigation links on mobile */
+    }
+    
+    .slideshow-container {
+        margin-top: 20px; /* Adjust top margin for slideshow container on mobile */
+        margin-bottom: 0px; /* Adjust bottom margin for slideshow container on mobile */
+    }
+    
+    .slideshow-container img {
+        height: 350px; /* Set height for slideshow images on mobile */
+        width: 91%; /* Set width for slideshow images on mobile */
+        object-fit: cover; /* Apply object-fit property for responsive image sizing */
+    }
+
+    .storeimage-container {
+        flex-direction: column; /* Stack items vertically for store image container on mobile */
+        width: 100%;
+        height: 620px; /* Set height for store image container on mobile */
+        display: flex;
+    }
+
+    .storeimage-container img {
+        height: 330px; /* Set height for store images on mobile */
+        width: 93%; /* Set width for store images on mobile */
+        margin-top: 20px; /* Adjust top margin for store images on mobile */
+    }
+
+    .storedescription-container h3 {
+        text-align: left;
+        padding-left: 47px; /* Adjust left padding for store description heading on mobile */
+        margin-top: 390px; /* Adjust top margin for store description heading on mobile */
+    }
+
+    .storedescription-container p {
+        padding-left: 47px; /* Adjust left padding for store description paragraph on mobile */
+        text-align: left; /* Align store description paragraph to the left on mobile */
+        margin-top: 39px; /* Adjust top margin for store description paragraph on mobile */
+    }
+
+
+    .about-container-bar h2 {
+        text-align: center; /* Center align the heading */
+        padding-left: 47px; /* Add left padding to the heading */
+    }
+    
+    .about-container-bar h3 {
+        text-align: center; /* Center align the subheading */
+        padding-left: 47px; /* Add left padding to the subheading */
+        padding-right: 47px; /* Add right padding to the subheading */
+    }
+    
+    .sample-cake {
+        flex: 0 0 calc(57% - 100px); /* Set the flex properties for the sample cake */
+        margin: 13px; /* Adjust margin for the sample cake */
+        position: relative;
+        overflow: hidden;
+        align-items: center; /* Align items to the center */
+    }
+    
+    .sample-cakes-container {
+        color: #000; /* Set the text color for the sample cakes container */
+        display: flex;
+        justify-content: center; /* Center align the content horizontally */
+        align-items: center; /* Center align the content vertically */
+        padding: auto; /* Set padding for the sample cakes container */
+    }
+    
+    .video-container {
+        display: flex;
+        justify-content: center; /* Center align the content horizontally */
+        align-items: center; /* Center align the content vertically */
+        height: 50vh ; /* Set the height of the video container */
+        margin: 10px 0; /* Adjust margin for the video container */
+        padding: 10px; /* Set padding for the video container */
+    }
+    
+    .about-container {
+        max-width: 100%; /* Set maximum width for the about container */
+    }
+    
+    .image-row {
+        display: flex;
+        flex-wrap: wrap; /* Wrap the items within the image row */
+    }
+    
+    .image-container {
+        flex: 0 0 calc(50% - 20px); /* Set the flex properties for the image container */
+        margin: 10px; /* Adjust margin for the image container */
+        align-items: center; /* Align items to the center */
+    }
+    
+    .image-row img {
+        width: 100%; /* Set width for images within the image row */
+        height: 0 auto; /* Maintain aspect ratio for images */
+    }
+    
+    .image-row p {
+        width: 100%; /* Adjust the width for two columns */
+        text-align: center; /* Center align the text within the image row */
+    }
+    
+    #local-video {
+        width: 91%; /* Adjust the percentage width for the local video */
+    }
+    
+    .form-group {
+        width: 100%; /* Set the width of the form group to 100% for responsiveness */
+    }
+    
+    .form-group label {
+        text-align: left; /* Align the form group label to the left */
+    }
+    
+    .form-group3 input,
+    .form-group3 textarea {
+        width: 350px; /* Set the width for form fields in form-group3 */
+        box-sizing: border-box; /* Include padding and border in the width calculation */
+    }
+    
+    .form-group2 input,
+    .form-group2 textarea {
+        width: 350px; /* Set the width for form fields in form-group2 */
+        box-sizing: border-box; /* Include padding and border in the width calculation */
+    }
+    
+    .form-row {
+        flex-direction: row; /* Arrange form rows in a horizontal direction */
+        padding-left: 4px; /* Add left padding to the form row */
+        margin-top: 0px; /* Adjust top margin of the form row */
+    }
+    
+    .form-row input,
+    .form-row textarea {
+        margin-right: 10px; /* Adjust spacing between form fields */
+        margin-bottom: 0; /* Reset bottom margin for form fields */
+        margin-top: 0px; /* Adjust top margin of form fields */
+    }
+    
+    .form-row1 {
+        display: flex;
+        flex-direction: column; /* Arrange form row1 in a vertical direction */
+        width: 55% ; /* Set the width for form row1 */
+        padding-left: 57px; /* Add left padding to form row1 */
+    }
+    
+    .form-row1 #name {
+        margin-bottom: 28px; /* Adjust bottom margin for the 'name' field in form row1 */
+    }
+    
+    .form-row1 input,
+    .form-row1 textarea {
+        margin-right: 10px; /* Adjust spacing between form fields in form row1 */
+        margin-bottom: 10px; /* Adjust bottom margin for form fields in form row1 */
+    }
+    
+    .popup-content2 .submit-container {
+        padding-right: 12%; /* Add right padding to the submit container in popup-content2 */
+    }
+   
+}

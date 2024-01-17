@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Baker Brew</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style sheet.css">
+    <script src="java script.js" defer></script>
+
+</head>
+
+<body>
+    <div class="background-image-container3">
+        <header>
+            <nav class="flex justify-between items-center p-4">
+                <a href="index.html" id="home-link">
+                <img src="photos/mori_logo.png" alt="mori" class="logo">
+                </a>
+                <div class="nav-bar">
+                    <nav class="mobile-nav">
+                        <ul>
+                            <li><a href="Backpacks.html" class="cakes-link">Backpacks</a></li>
+                            <li><a href="Travelbags.html" class="cakes-link underline-link">Travel Bags</a></li>
+                            <li><a href="Handbags.html" class="cakes-link">Handbags</a></li>
+                            <li><a href="Accessories.html" class="cakes-link">Accessories</a></li>
+                            <li><a href="Contact.html" class="cakes-link">Contact</a></li>
+                            <div class="cart-icon" onclick="toggleCart()">
+                                <img src="photos/shopping-cart.png" alt="Shopping Cart">
+                                <span id="cart-count">0</span>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </header>
+        
+
+        <div class="about-container">
+            <div class="about-container-bar">
+                <h2>
+                    Looking for a Customised Cake?
+                </h2>
+
+                <h4>It’s nice to meet you! We’re excited to be part of this journey with you!</h4>
+                <h4> We’ve put together a portfolio of our best cake designs for all kinds of</h4>
+                <h4> events over the years, so you know you’re in good hands.</h4>
+                
+                <div class="image-row">
+                    <div class="image-container">
+                        <img src="photos/cakes.png" alt="Image 1">
+                        <p>Custom Cakes</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="photos/timer.png" alt="Image 2">
+                        <p>Timely Delivery</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="photos/shipping.png" alt="Image 3">
+                        <p>Secure Shipping</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="photos/decorating.png" alt="Image 4">
+                        <p>Creative Decorating</p>
+                    </div>
+                </div>
+
+                <h4>We take pride in providing a highly personalised experience for all our clients.</h4>
+                <h4>Our cake specialists will gather your ideas and translate them into one-of-a-kind sketch before bringing your cakes to life.</h4>
+                <h4></h4>
+                <h4>The product of our process is a beautiful and modern cake that’s a definite highlight of your celebration.</h4>
+                <h4></h4>
+                <h3>Here are some of our best designs</h3>
+            </div>
+
+
+            <div class="sample-cakes-container">
+
+                <div class="sample-cake" id="cake1">
+                    <img src="photos/White Swan.jpg" alt="Cake Image 1">
+                    <div class="cake-info">
+                        <div class="plus-icon" onclick="addToCart('White Swan', this)">+</div>
+                    </div>
+                    <div class="cake-name">White Swan <br><span class="price-tag">$102.00</span></div>
+                </div>
+
+                <div class="sample-cake" id="cake2">
+                    <img src="photos/Violet Love Cake.jpg" alt="Cake Image 2">
+                    <div class="cake-info">
+                        <div class="plus-icon" onclick="addToCart('Violet Love Cake', this)">+</div>
+                    </div>
+                    <div class="cake-name">Violet Love Cake<br> <span class="price-tag">$105.00</span></div>
+                </div>
+                <div class="sample-cake" id="cake3">
+                    <img src="photos/Red Roses & Golds Cake.jpg" alt="Cake Image 3">
+                    <div class="cake-info">
+                        <div class="plus-icon" onclick="addToCart('Red Roses & Golds Cake', this)">+</div>
+                    </div>
+                    <div class="cake-name">Mango Calamansi Yoghurt Cake<br> <span class="price-tag">$90.00</span></div>
+                </div>
+                <div class="sample-cake" id="cake4">
+                    <img src="photos/Misty Butterflies Cake.jpg" alt="Cake Image 4">
+                    <div class="cake-info">
+                        <div class="plus-icon" onclick="addToCart('Misty Butterflies Cake', this)">+</div>
+                    </div>
+                    <div class="cake-name">Misty Butterflies Cake<br><span class="price-tag">$100.00</span></div>
+                </div>
+                <div class="sample-cake" id="cake5">
+                    <img src="photos/Lilac Night.jpg" alt="Cake Image 5">
+                    <div class="cake-info">
+                        <div class="plus-icon" onclick="addToCart('Lilac Night', this)">+</div>
+                    </div>
+                    <div class="cake-name">Lilac Night<br> <span class="price-tag">$99.00</span></div>
+                </div>
+                <div class="sample-cake" id="cake6">
+                    <img src="photos/Golden Wings.jpg" alt="Cake Image 6">
+                    <div class="cake-info">
+                        <div class="plus-icon" onclick="addToCart('Golden Wings', this)">+</div>
+                    </div>
+                    <div class="cake-name"id="cake2" >Golden Wings<br> <span class="price-tag">$103.00</span></div>
+                </div>
+                <div class="sample-cake" id="cake7">
+                    <img src="photos/Floral Longevity Cake.jpg" alt="Cake Image 7">
+                    <div class="cake-info">
+                        <div class="plus-icon" onclick="addToCart('Floral Longevity Cake', this)">+</div>
+                    </div>
+                    <div class="cake-name">Floral Longevity Cake<br> <span class="price-tag">$109.00</span></div>
+                </div>
+                <div class="sample-cake" id="cake8">
+                    <img src="photos/Fairies Cake.jpg" alt="Cake Image 8">
+                    <div class="cake-info">
+                        <div class="plus-icon" onclick="addToCart('Fairies Cake', this)">+</div>
+                    </div>
+                    <div class="cake-name">Fairies Cake <br><span class="price-tag">$100.00</span></div>
+                </div>
+                <div class="sample-cake" id="cake9">
+                    <img src="photos/Blush Princess.jpg" alt="Cake Image 9">
+                    <div class="cake-info">
+                        <div class="plus-icon" onclick="addToCart('Blush Princess', this)">+</div>
+                    </div>
+                    <div class="cake-name">Blush Princess<br><span class="price-tag">$117.00</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button onclick="openPopupForm()"class="custom-button">CUSTOMISED NOW</button>
+        </div>
+
+        <!-- Pop-up Form -->
+        <div class="popup-content">    
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="contact">Contact:</label>
+                <input type="text" id="contact" name="contact" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+        
+            <div class="form-group">
+                <label for="file">Upload file:</label>
+                <input type="file" id="file" name="file">
+            </div>
+        
+            <div class="submit-container">
+                <button class="custom-button" onclick="closePopupForm()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="cart-popup" style="right: -500px;">
+        <div class="shopping-cart-title">Shopping Cart</div>
+        <div class="empty-cart-title">Your Cart is Empty</div>
+        <div class="cart-popup-content">
+        </div>
+        <div class="close-cart" onclick="toggleCart()">X</div>
+    </div>
+
+
+    
+
+<footer>
+    <div class="about-container">
+        <div class="concierge-info">
+            <p> +65 8877 8870 / enquiries@bakersbrew.com / corporate@bakersbrew.com</p>
+            <p>(Operating Hours: Mon-Sun 9:00 AM - 6:00 PM)</p>
+        </div>
+        <div class="grey-line"></div>
+        <h2>FOLLOW US ON SOCIAL MEDIA</h2>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/baker" target="_blank">
+                <img src="photos/instagramicon.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/bakersbrewstudio" target="_blank">
+                <img src="photos/facebookicon.png" alt="Facebook">
+            </a>
+            <a href="https://www.tiktok.com/@bakersbrew" target="_blank">
+                <img src="photos/tiktokicon.png" alt="Tiktok">
+            </a>
+        </div>
+    </div>    
+</footer>
+<script src="java script.js" defer></script>
+
+</body>
+
+</html>

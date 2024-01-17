@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Baker Brew</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style sheet.css">
+    <script src="java script.js" defer></script>
+</head>
+<body>
+    <div class="background-image-container1">
+        <header>
+            <button id="mobile-menu-button">☰</button>
+            <nav class="flex justify-between items-center p-4">
+                <a href="index.html" id="home-link">
+                <img src="photos/mori_logo.png" alt="mori" class="logo">
+                </a>
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="Backpacks.html" class="cakes-link">Backpacks</a></li>
+                        <li><a href="Travelbags.html" class="cakes-link">Travel Bags</a></li>
+                        <li><a href="Handbags.html" class="cakes-link">Handbags</a></li>
+                        <li><a href="Accessories.html" class="cakes-link">Accessories</a></li>
+                        <li><a href="Contact.html" class="cakes-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <img src="photos/shopping-cart.png" alt="Shopping Cart">
+                    <span id="cart-count">0</span>
+                </div>
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="Backpacks.html" class="cakes-link">Backpacks</a></li>
+                        <li><a href="Travelbags.html" class="cakes-link">Travel Bags</a></li>
+                        <li><a href="Handbags.html" class="cakes-link">Handbags</a></li>
+                        <li><a href="Accessories.html" class="cakes-link">Accessories</a></li>
+                        <li><a href="Contact.html" class="cakes-link">Contact</a></li>
+                        <div class="cart-icon" onclick="toggleCart()">
+                            <img src="photos/shopping-cart.png" alt="Shopping Cart">
+                            <span id="cart-count">0</span>
+                        </div>
+                    </ul>
+                </nav>
+            </nav>
+        </header>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="photos/slider image1.jpg" alt="Cake Image 1">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="photos/slider image 2.jpg" alt="Cake Image 2">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="photos/slider image 3.jpg" alt="Cake Image 3">
+            </div>
+        </div>
+        <div class="slider-dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <div class="button-container">
+            <a href="Classic Cake.html" class="custom-button">ORDER NOW</a>
+        </div>
+
+        <div class="video-container" id="video-container">
+            <video id="local-video" width="720" height="400" controls autoplay muted playsinline>
+                <source src="photos/ad_video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div> 
+    
+    <div class="storeimage-container">
+        <img src="photos/baker's brew store.jpg" alt="Baker's Brew Store Image">
+        <div class="storedescription-container">
+            <h3>
+                FIND A BAKER’S BREW BAKERY & CAKE SHOP NEAREST TO YOU
+            </h3>
+
+            <p>
+                Embark on a delightful culinary journey as you explore the nearest Baker’s 
+                Brew outlet in your vicinity. Indulge in a world of mouthwatering, expertly 
+                crafted cakes, pastries, and breads, tailored to satisfy every palate. 
+            </p>
+        </div>
+    </div>
+    <div class="cart-popup" style="right: -500px;">
+        <div class="shopping-cart-title">Shopping Cart</div>
+        <div class="empty-cart-title">Your Cart is Empty</div>
+        <div class="cart-popup-content">
+        </div>
+        <div class="close-cart" onclick="toggleCart()">X</div>
+    </div>
+    
+
+
+<footer>
+    <div class="about-container">
+        <h3>ABOUT US</h3>
+        <p>
+            Started back in 2015 with a humble beginning of the love and passion for baking,
+            Baker's Brew wanted to share this zeal for baking with the community
+            around the neighborhood of Sembawang, Singapore.
+
+            Since then, we have grown strong to be The Leading Cake Shop & Bakery in Singapore.
+        </p>
+        <div class="concierge-info">
+            <p> +65 8877 8870 / enquiries@bakersbrew.com / corporate@bakersbrew.com</p>
+            <p>(Operating Hours: Mon-Sun 9:00 AM - 6:00 PM)</p>
+        </div>
+        <div class="grey-line"></div>
+        <h2>FOLLOW US ON SOCIAL MEDIA</h2>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/baker" target="_blank">
+                <img src="photos/instagramicon.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/bakersbrewstudio" target="_blank">
+                <img src="photos/facebookicon.png" alt="Facebook">
+            </a>
+            <a href="https://www.tiktok.com/@bakersbrew" target="_blank">
+                <img src="photos/tiktokicon.png" alt="Tiktok">
+            </a>
+        </div>
+    </div>
+</footer>
+<script src="java script.js" defer></script>
+</body>
+
+</html>
