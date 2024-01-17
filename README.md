@@ -25,3 +25,4 @@ Contact Us (ContactUs.html): The Contact Us page will serve as a hub for user in
 Reference:
 https://www.thebagcreature.com/cdn/shop/files/The-Bag-Creature-Long-Weekend-Morro-Backpack-1.jpg?v=1701235909&width=2800
 
+https://www.thebagcreature.com/cdn/shop/files/The-Bag-Creature-Sympl-Studios.jpg?v=1703830997&width=2800
