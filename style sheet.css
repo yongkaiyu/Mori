@@ -466,7 +466,7 @@ footer {
 
 /* Add a new style for the background image container */
 .background-image-container1 {
-    background-image: url('photos/cake background1.jpg');
+    background-image: url('photos/background1.jpg');
     background-size: cover; /* Set background size to cover */
     background-position: center; /* Set background position to center */
     background-attachment: fixed; /* Fix the background position */
