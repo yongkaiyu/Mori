@@ -6,6 +6,16 @@ body{
     background-repeat: no-repeat;
 }
 
+.c-item {
+    height: 660px;
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
 @media(max-width: 991px){
     .sidebar{
         background-color: rgba(0, 0, 0, 0.15);
